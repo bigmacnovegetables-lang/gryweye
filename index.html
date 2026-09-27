@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巨蟹座 ♋ 10月感情運勢・盧恩×紫微占卜</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:       #FAF5EE;
+    --coral:    #D07050;
+    --coral-lt: #E89070;
+    --gold:     #C89038;
+    --gold-lt:  #E0B058;
+    --peach:    #F0C098;
+    --ink:      #1E0E08;
+    --ink-dim:  #5A3420;
+    --card-bg:  rgba(255,251,245,0.97);
+    --card-border: rgba(208,112,80,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(ellipse 800px 500px at 0% 0%, rgba(208,112,80,0.12), transparent 55%),
+      radial-gradient(ellipse 600px 600px at 100% 30%, rgba(200,144,56,0.1), transparent 55%),
+      radial-gradient(ellipse 500px 400px at 45% 100%, rgba(232,144,112,0.08), transparent 55%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans TC',sans-serif;
+    line-height:2;
+    overflow-x:hidden;
+  }
+  .container{max-width:760px;margin:0 auto;padding:0 28px;}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{animation:fadeUp 1s cubic-bezier(.2,.7,.3,1) both;animation-play-state:paused;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes sunGlow{0%,100%{opacity:0.07;transform:scale(1)}50%{opacity:0.12;transform:scale(1.06)}}
+  .floaty{position:fixed;pointer-events:none;z-index:0;opacity:0.1;animation:float var(--d) ease-in-out infinite;}
+  .sun-bg{position:fixed;top:-8%;right:-5%;width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(224,176,88,0.12),transparent 70%);
+    pointer-events:none;z-index:0;animation:sunGlow 7s ease-in-out infinite;}
+
+  /* HERO */
+  header.hero{position:relative;text-align:center;padding:96px 24px 80px;overflow:hidden;}
+  .hero-deco{position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);width:520px;height:520px;opacity:0.07;z-index:0;}
+  .hero-content{position:relative;z-index:1;}
+  .month-badge{display:inline-block;background:rgba(208,112,80,0.12);border:1px solid rgba(208,112,80,0.28);border-radius:999px;padding:5px 18px;font-size:12.5px;font-weight:700;letter-spacing:0.2em;color:var(--coral);margin-bottom:16px;}
+  .eyebrow{font-size:12.5px;letter-spacing:0.44em;color:var(--coral);font-weight:700;margin-bottom:20px;text-transform:uppercase;}
+  .hero h1{
+    font-family:'Noto Serif TC',serif;font-weight:900;
+    font-size:clamp(38px,7.5vw,62px);line-height:1.2;
+    background:linear-gradient(135deg,var(--coral) 0%,var(--gold-lt) 50%,var(--coral-lt) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    margin-bottom:10px;
+  }
+  .hero .sub{font-family:'Noto Serif TC',serif;font-size:clamp(17px,3vw,22px);color:var(--ink-dim);margin-bottom:28px;}
+  .hero p.lede{max-width:540px;margin:0 auto;font-size:16px;color:var(--ink-dim);line-height:2.1;}
+  .coral-line{width:100px;height:2px;margin:30px auto;background:linear-gradient(90deg,transparent,var(--coral),var(--gold-lt),transparent);border-radius:2px;}
+  .scroll-hint{font-size:12px;letter-spacing:0.28em;color:var(--coral);opacity:0.65;margin-top:8px;}
+  .scroll-hint svg{display:block;margin:10px auto 0;animation:bob 2s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+  /* SECTION */
+  section{position:relative;padding:58px 0;z-index:1;}
+  .section-title{font-family:'Noto Serif TC',serif;font-weight:700;font-size:clamp(21px,3.8vw,27px);text-align:center;margin-bottom:12px;color:var(--ink);}
+  .section-sub{text-align:center;color:var(--ink-dim);font-size:14.5px;max-width:480px;margin:0 auto 44px;}
+  .divider{width:56px;height:1.5px;margin:0 auto 44px;background:linear-gradient(90deg,transparent,var(--coral),transparent);}
+
+  /* CORE BANNER */
+  .core-banner{
+    background:linear-gradient(135deg,rgba(208,112,80,0.1),rgba(200,144,56,0.08));
+    border-radius:26px;padding:38px 34px;text-align:center;
+    border:1px solid rgba(208,112,80,0.2);
+    box-shadow:0 8px 28px -15px rgba(208,112,80,0.14);
+  }
+  .core-banner .b-icon{font-size:36px;display:block;margin-bottom:16px;}
+  .core-banner h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--coral);margin-bottom:14px;}
+  .core-banner p{color:var(--ink-dim);font-size:15.5px;max-width:500px;margin:0 auto;}
+
+  /* RUNE CARDS */
+  .card-grid{display:flex;flex-direction:column;gap:24px;}
+  .oracle-card{
+    background:var(--card-bg);border:1px solid var(--card-border);
+    border-radius:22px;padding:30px 28px;
+    box-shadow:0 10px 34px -18px rgba(208,112,80,0.13);
+    transition:transform .3s,box-shadow .3s,border-color .3s;
+  }
+  .oracle-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px -18px rgba(208,112,80,0.2);border-color:rgba(208,112,80,0.3);}
+  .card-top{display:flex;align-items:center;gap:15px;margin-bottom:14px;}
+  .card-glyph{
+    width:52px;height:52px;min-width:52px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;
+  }
+  .g-coral{background:linear-gradient(135deg,var(--coral-lt),var(--coral));color:white;}
+  .g-gold{background:linear-gradient(135deg,var(--gold-lt),var(--gold));color:#1E0E08;}
+  .card-name{font-family:'Noto Serif TC',serif;font-weight:700;font-size:18px;color:var(--ink);}
+  .card-tag{display:inline-block;margin-top:4px;font-size:11.5px;padding:3px 10px;border-radius:999px;font-weight:700;}
+  .tag-up{background:rgba(208,112,80,0.12);color:#7A2810;}
+  .card-body{color:var(--ink-dim);font-size:15px;}
+
+  /* ZIWEI BOX */
+  .ziwei-box{
+    background:linear-gradient(135deg,rgba(200,144,56,0.1),rgba(208,112,80,0.07));
+    border-radius:26px;padding:40px 34px;
+    border:1px solid rgba(200,144,56,0.22);
+    box-shadow:0 8px 28px -15px rgba(200,144,56,0.15);
+  }
+  .ziwei-header{text-align:center;margin-bottom:24px;}
+  .ziwei-badge{display:inline-block;background:rgba(200,144,56,0.15);border:1px solid rgba(200,144,56,0.28);border-radius:999px;padding:5px 16px;font-size:12.5px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+  .ziwei-header h3{font-family:'Noto Serif TC',serif;font-size:21px;color:var(--gold);}
+  .ziwei-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px;}
+  .ziwei-card{
+    background:white;border:1px solid rgba(200,144,56,0.18);
+    border-radius:16px;padding:20px 18px;
+    box-shadow:0 4px 14px -8px rgba(200,144,56,0.12);
+  }
+  .zc-star{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:900;
+    background:linear-gradient(135deg,var(--coral),var(--gold));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;display:block;margin-bottom:8px;}
+  .ziwei-card h4{font-family:'Noto Serif TC',serif;font-size:15px;color:var(--ink);margin-bottom:8px;}
+  .ziwei-card p{font-size:13px;color:var(--ink-dim);line-height:1.85;}
+  .ziwei-combo{
+    background:rgba(255,248,240,0.8);border:1px solid rgba(208,112,80,0.15);
+    border-radius:14px;padding:18px 20px;
+    font-size:14.5px;color:var(--ink-dim);line-height:1.9;
+  }
+  .ziwei-combo strong{color:var(--coral);}
+
+  /* OUTING BOX */
+  .outing-box{
+    background:linear-gradient(135deg,rgba(208,112,80,0.09),rgba(200,144,56,0.07));
+    border-radius:26px;padding:40px 34px;
+    border:1px solid rgba(208,112,80,0.18);
+    box-shadow:0 8px 28px -15px rgba(208,112,80,0.12);
+  }
+  .outing-box h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--coral);margin-bottom:18px;text-align:center;}
+  .outing-list{display:flex;flex-direction:column;gap:14px;}
+  .outing-item{
+    background:white;border:1px solid rgba(208,112,80,0.14);
+    border-radius:14px;padding:16px 20px;
+    display:flex;gap:14px;align-items:flex-start;
+    box-shadow:0 4px 14px -8px rgba(208,112,80,0.1);
+  }
+  .oi-icon{font-size:20px;min-width:26px;}
+  .oi-text h4{font-family:'Noto Serif TC',serif;font-size:15px;color:var(--ink);margin-bottom:4px;}
+  .oi-text p{font-size:13.5px;color:var(--ink-dim);line-height:1.85;}
+
+  /* HANDSOME BOX */
+  .handsome-box{
+    background:linear-gradient(135deg,rgba(200,144,56,0.1),rgba(208,112,80,0.08));
+    border-radius:26px;padding:38px 34px;text-align:center;
+    border:1px solid rgba(200,144,56,0.2);
+    box-shadow:0 8px 28px -15px rgba(200,144,56,0.14);
+  }
+  .handsome-box .hb-icon{font-size:36px;display:block;margin-bottom:14px;}
+  .handsome-box h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--gold);margin-bottom:14px;}
+  .handsome-box p{color:var(--ink-dim);font-size:15.5px;max-width:500px;margin:0 auto;}
+
+  /* SITUATIONS */
+  .situation-list{display:flex;flex-direction:column;gap:32px;}
+  .situation{
+    background:var(--card-bg);border-radius:22px;padding:34px 30px;
+    border:1px solid var(--card-border);
+    border-left:4px solid var(--coral);
+    box-shadow:0 8px 28px -15px rgba(208,112,80,0.12);
+  }
+  .s2{border-left-color:var(--gold);}
+  .s3{border-left-color:var(--coral-lt);}
+  .sit-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.1em;padding:3px 13px;border-radius:999px;margin-bottom:13px;}
+  .s1 .sit-tag{background:rgba(208,112,80,0.12);color:#7A2810;}
+  .s2 .sit-tag{background:rgba(200,144,56,0.12);color:#7A4808;}
+  .s3 .sit-tag{background:rgba(232,144,112,0.12);color:#8A3018;}
+  .situation h3{font-family:'Noto Serif TC',serif;font-weight:700;font-size:19px;margin-bottom:13px;color:var(--ink);}
+  .situation p{color:var(--ink-dim);font-size:15px;}
+  .coral-tag{
+    display:inline-block;background:rgba(208,112,80,0.07);
+    border-left:3px solid var(--coral);border-radius:0 8px 8px 0;
+    padding:10px 16px;margin:12px 0;font-size:14px;
+    color:var(--ink-dim);font-style:italic;width:100%;
+  }
+
+  /* COMPATIBILITY */
+  .compat-section{margin-bottom:32px;}
+  .compat-title{font-family:'Noto Serif TC',serif;font-size:18px;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .compat-title.good{color:#4A1808;}
+  .compat-title.warn{color:#7A3818;}
+  .compat-grid{display:flex;flex-direction:column;gap:14px;}
+  .compat-row{
+    background:var(--card-bg);border:1px solid var(--card-border);
+    border-radius:18px;padding:20px 22px;
+    display:flex;gap:16px;align-items:center;
+    box-shadow:0 4px 16px -8px rgba(208,112,80,0.1);
+  }
+  .compat-rank{width:32px;height:32px;min-width:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;}
+  .rank-good{background:linear-gradient(135deg,#C07040,#A05020);}
+  .rank-warn{background:linear-gradient(135deg,#A87848,#886030);}
+  .compat-sign{width:44px;height:44px;min-width:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:white;}
+  .sign-good{background:linear-gradient(135deg,#C08858,#A06838);}
+  .sign-warn{background:linear-gradient(135deg,#C8A878,#A08058);}
+  .compat-info{flex:1;}
+  .compat-info h4{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink);margin-bottom:4px;}
+  .compat-info p{color:var(--ink-dim);font-size:13.5px;line-height:1.85;}
+
+  /* QUOTE */
+  .quote-box{
+    background:var(--card-bg);border-radius:22px;padding:44px 36px;
+    text-align:center;border:1px solid var(--card-border);
+    box-shadow:0 8px 28px -15px rgba(208,112,80,0.12);
+  }
+  .quote-box .qm{font-family:'Noto Serif TC',serif;font-size:52px;color:var(--coral);opacity:0.35;line-height:0.5;display:block;margin-bottom:16px;}
+  .quote-box p{font-family:'Noto Serif TC',serif;font-size:17.5px;color:var(--ink);max-width:500px;margin:0 auto;line-height:2.1;}
+
+  /* 199 BLOCK */
+  .price-block{
+    background:linear-gradient(135deg,#281008,var(--coral));
+    border-radius:26px;padding:44px 36px;text-align:center;
+    position:relative;overflow:hidden;
+    box-shadow:0 20px 50px -20px rgba(208,112,80,0.45);
+  }
+  .price-block::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 20%,rgba(224,176,88,0.2),transparent 50%),
+               radial-gradient(circle at 20% 80%,rgba(232,144,112,0.15),transparent 50%);
+  }
+  .price-inner{position:relative;z-index:1;}
+  .price-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:999px;padding:6px 20px;font-size:13px;font-weight:700;letter-spacing:0.15em;color:white;margin-bottom:8px;}
+  .price-limit{display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.28);border-radius:999px;padding:4px 14px;font-size:12px;font-weight:700;color:#FAE8C0;margin-bottom:16px;margin-left:8px;}
+  .price-block h2{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(22px,4vw,30px);color:white;margin-bottom:14px;}
+  .price-amount{font-family:'Noto Serif TC',serif;font-size:clamp(44px,8vw,64px);font-weight:900;color:#FAE8C0;line-height:1;margin:20px 0 10px;}
+  .price-amount span{font-size:0.5em;vertical-align:top;margin-top:12px;display:inline-block;}
+  .price-block p{color:rgba(255,255,255,0.88);font-size:15.5px;max-width:460px;margin:0 auto 28px;}
+  .price-cta{
+    display:inline-block;background:white;
+    color:var(--coral);font-family:'Noto Serif TC',serif;font-weight:700;
+    font-size:16px;padding:14px 36px;border-radius:999px;
+    text-decoration:none;transition:transform .2s,box-shadow .2s;
+    box-shadow:0 8px 24px -8px rgba(40,16,8,0.3);
+  }
+  .price-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(40,16,8,0.38);}
+  .price-note{margin-top:18px;font-size:13px;color:rgba(255,255,255,0.55);}
+
+  /* CTA */
+  .cta-section{padding:70px 0 100px;}
+  .cta-header{text-align:center;margin-bottom:44px;}
+  .cta-eyebrow{font-size:12.5px;letter-spacing:0.35em;color:var(--coral);font-weight:700;margin-bottom:14px;text-transform:uppercase;display:block;}
+  .cta-header h2{font-family:'Noto Serif TC',serif;font-weight:700;font-size:clamp(21px,3.8vw,28px);color:var(--ink);margin-bottom:13px;}
+  .cta-header p{color:var(--ink-dim);font-size:15px;max-width:460px;margin:0 auto;}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:32px;}
+  .cta-opt{
+    background:var(--card-bg);border:1px solid var(--card-border);
+    border-radius:20px;padding:26px 22px;text-align:center;
+    box-shadow:0 6px 22px -14px rgba(208,112,80,0.12);
+    transition:transform .3s,border-color .3s;
+  }
+  .cta-opt:hover{transform:translateY(-4px);border-color:rgba(208,112,80,0.3);}
+  .cta-opt .icon{font-size:26px;display:block;margin-bottom:11px;}
+  .cta-opt h3{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink);margin-bottom:9px;}
+  .cta-opt p{font-size:13px;color:var(--ink-dim);margin-bottom:16px;line-height:1.8;}
+  .line-btn{
+    display:inline-flex;align-items:center;gap:6px;padding:8px 20px;
+    background:linear-gradient(135deg,var(--coral),var(--gold));
+    color:white;font-weight:700;border-radius:999px;font-size:13.5px;
+    text-decoration:none;transition:opacity .2s,transform .2s;
+  }
+  .line-btn:hover{opacity:0.85;transform:translateY(-1px);}
+  .cta-note{
+    text-align:center;background:rgba(208,112,80,0.07);
+    border:1px solid rgba(208,112,80,0.15);
+    border-radius:14px;padding:20px 24px;color:var(--ink-dim);font-size:14px;
+  }
+
+  footer{text-align:center;padding:40px 24px 60px;font-size:12.5px;color:rgba(208,112,80,0.38);letter-spacing:0.08em;}
+
+  @media(max-width:600px){
+    .hero{padding:80px 20px 64px;}
+    .ziwei-grid{grid-template-columns:1fr;}
+    .cta-grid{grid-template-columns:1fr;}
+    .situation,.oracle-card,.compat-row{padding:24px 18px;}
+    .price-block{padding:36px 22px;}
+    .quote-box{padding:32px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="sun-bg"></div>
+
+<script>
+  const floaties=[
+    {top:'6%',left:'3%',size:18,d:'7s',e:'☀️'},
+    {top:'28%',left:'92%',size:14,d:'9s',e:'🍜'},
+    {top:'58%',left:'2%',size:16,d:'8s',e:'✨'},
+    {top:'80%',left:'91%',size:14,d:'6s',e:'🌅'},
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    floaties.forEach((f,i)=>{
+      const el=document.createElement('div');
+      el.className='floaty';
+      el.style.cssText=`top:${f.top};left:${f.left};font-size:${f.size}px;--d:${f.d};animation-delay:${i*1.8}s`;
+      el.textContent=f.e;
+      document.body.appendChild(el);
+    });
+  });
+</script>
+
+<header class="hero">
+  <svg class="hero-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" fill="none" stroke="#D07050" stroke-width="1.2"/>
+    <circle cx="100" cy="100" r="78" fill="none" stroke="#C89038" stroke-width="0.8" stroke-dasharray="4 6"/>
+    <circle cx="100" cy="100" r="60" fill="none" stroke="#E89070" stroke-width="1"/>
+    <circle cx="100" cy="100" r="42" fill="none" stroke="#D07050" stroke-width="0.6" stroke-dasharray="2 5"/>
+    <circle cx="100" cy="100" r="24" fill="none" stroke="#C89038" stroke-width="0.8"/>
+    <!-- 太陽光芒 -->
+    <line x1="100" y1="5" x2="100" y2="22" stroke="#E0B058" stroke-width="1.2" opacity="0.55"/>
+    <line x1="153" y1="28" x2="142" y2="42" stroke="#D07050" stroke-width="1" opacity="0.5"/>
+    <line x1="47" y1="28" x2="58" y2="42" stroke="#D07050" stroke-width="1" opacity="0.5"/>
+    <line x1="188" y1="80" x2="172" y2="84" stroke="#E0B058" stroke-width="0.9" opacity="0.45"/>
+    <line x1="12" y1="80" x2="28" y2="84" stroke="#E0B058" stroke-width="0.9" opacity="0.45"/>
+    <line x1="170" y1="148" x2="157" y2="135" stroke="#E89070" stroke-width="0.8" opacity="0.4"/>
+    <line x1="30" y1="148" x2="43" y2="135" stroke="#E89070" stroke-width="0.8" opacity="0.4"/>
+    <line x1="100" y1="195" x2="100" y2="178" stroke="#C89038" stroke-width="0.9" opacity="0.4"/>
+  </svg>
+  <div class="hero-content reveal">
+    <div class="month-badge">☀️ October 2026</div>
+    <div class="eyebrow">October Rune × ZiWei Reading · 2026</div>
+    <h1>♋ 巨蟹座</h1>
+    <div class="sub">10月感情運勢｜盧恩符文 × 紫微斗數解析</div>
+    <div class="coral-line"></div>
+    <p class="lede">巨蟹座，這個10月命盤給你的是一道難得的暖陽能量——太陽星的光芒照著你的感情場域，巳火說行動力到位，Raidho 說走出去、Kenaz 說火花在等你。這個月最重要的事：放下在家等的習慣，帶著你最坦率的那一面，出門去，好事就在外面等著你。</p>
+    <div class="scroll-hint">
+      往下看，牌說了什麼
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D07050" stroke-width="1.8"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- CORE BANNER -->
+  <section id="keynote">
+    <div class="core-banner reveal">
+      <span class="b-icon">🌅</span>
+      <h3>這個月的核心：走出去，讓太陽能量把好的緣分帶到你面前</h3>
+      <p>太陽星＋地支巳＋Raidho 三個能量這個月都在說同一件事：出門。巨蟹座很習慣在家裡等待，用深情和耐心守著感情的可能。但這個月這個策略不適用——命盤說那份好緣分在外面，在一頓美食裡、在一趟旅程裡、在一個你本來不打算去的地方等著你。Kenaz 說那個火花在你走出去之後就會自然地發生，坦率地展示你自己，讓那份暖陽能量帶著你走。</p>
+    </div>
+  </section>
+
+  <!-- RUNE CARDS -->
+  <section id="rune-cards">
+    <h2 class="section-title">盧恩牌陣解析</h2>
+    <p class="section-sub">這個月兩張盧恩符文說的都是同一個方向——動起來，好事才來。</p>
+    <div class="divider"></div>
+
+    <div class="card-grid">
+
+      <article class="oracle-card reveal">
+        <div class="card-top">
+          <div class="card-glyph g-coral">ᚱ</div>
+          <div>
+            <div class="card-name">Raidho 旅程・走出去，感情在移動中往前</div>
+            <span class="card-tag tag-up">盧恩・正位・主牌</span>
+          </div>
+        </div>
+        <div class="card-body">
+          Raidho 是旅程和移動的符文——它說感情這個月需要在「走動」中發生，不是坐在家裡等，而是走出去，讓自己出現在不同的地方、不同的場合、不同的人面前。Raidho 說感情的能量這個月是流動的，當你移動，它也跟著移動；當你停在原地等待，它就停在你到不了的地方等著你。對巨蟹座來說，Raidho 這個月的訊號特別重要——你習慣在安全的殼裡等緣分找上門，但這個月緣分在外面，不在你家。多出遊、多約飯局、多去那些你平常覺得「算了不去了」的場合——Raidho 說那個讓你心動的人，就在其中一個你沒預期到的地方出現。旅程本身就是緣分，走著走著，就遇到了。
+        </div>
+      </article>
+
+      <article class="oracle-card reveal">
+        <div class="card-top">
+          <div class="card-glyph g-gold">ᚲ</div>
+          <div>
+            <div class="card-name">Kenaz 火炬・真實的火花，坦率點就點燃</div>
+            <span class="card-tag tag-up">盧恩・正位</span>
+          </div>
+        </div>
+        <div class="card-body">
+          Kenaz 是火炬和熱情的符文，說的是這個月感情裡有一份非常真實的火花能量——它不需要你設計，不需要你計畫，只需要你在對的地方出現，讓你本來就有的那份溫暖和直率自然地流出來。Kenaz 說巨蟹座這個月最吸引人的樣子，是那個放鬆、坦率、不把自己藏起來的你——在一頓好吃的飯局上笑得開心的你、在旅途中對陌生風景驚訝的你、說一句讓對方感覺「哇，她/他好直接好可愛」的話的你。那個不刻意的坦率，才是 Kenaz 說的讓感情火花點燃的方式。這個月讓自己少一點計算，多一點真實，讓那把火炬自然地燃起來。
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ZIWEI BOX -->
+  <section id="ziwei">
+    <h2 class="section-title">紫微斗數牌卡解析</h2>
+    <p class="section-sub">太陽星 × 地支巳，這個月命盤給巨蟹座的是什麼能量？</p>
+    <div class="divider"></div>
+
+    <div class="ziwei-box reveal">
+      <div class="ziwei-header">
+        <div class="ziwei-badge">✦ 紫微斗數・感情星曜解析</div>
+        <h3>太陽星 × 地支巳・暖陽出動，主動才有收穫</h3>
+      </div>
+
+      <div class="ziwei-grid">
+        <div class="ziwei-card">
+          <span class="zc-star">太陽</span>
+          <h4>太陽星・光芒與主動能量</h4>
+          <p>太陽是紫微斗數裡代表光明、熱情、主動、向外擴展的星曜。這個月太陽的能量照在巨蟹座的感情場域上，說的是兩件事：第一，你這個月散發的吸引力比平時更強、更有光芒，讓你出現的地方都讓人注意到；第二，太陽說這個月的感情要靠主動——太陽不等人，它出來就是要讓世界看見它。這個月巨蟹座也需要這種太陽的精神：走出去，讓自己被看見。</p>
+        </div>
+        <div class="ziwei-card">
+          <span class="zc-star">巳</span>
+          <h4>地支巳・火的行動力與機緣</h4>
+          <p>巳是十二地支中屬火、代表午前暖陽、充滿活動力的地支——它的能量是「準備好了，出發」。地支巳這個月說巨蟹座的行動力和機緣能量同時在線：機緣在，但需要你的行動去接住它。巳火的能量說這個月凡是你走出去的時刻，感情能量就會在那個時刻流動起來——美食、旅遊、朋友聚會，任何讓你離開家的機會，都是巳火說的機緣場域。</p>
+        </div>
+      </div>
+
+      <div class="ziwei-combo">
+        <strong>太陽 + 地支巳 + Raidho + Kenaz 全部說同一件事：</strong><br>
+        這個月巨蟹座的感情好運藏在外出的行動裡——在一頓你認真安排的美食約會裡、在一趟說走就走的短途旅遊裡、在一個朋友介紹的飯局裡、在一個讓你開心到忘記保護自己的輕鬆場合裡。太陽說你出現的地方你就是焦點，巳火說機緣跟著你的行動走，Raidho 說感情在移動中發生，Kenaz 說坦率就能點燃火花。<strong>這個月的策略只有一個：出門，帶著你最真實的樣子出門。</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTING BOX -->
+  <section id="outing">
+    <h2 class="section-title">這個月這樣出遊，感情能量最強</h2>
+    <p class="section-sub">Raidho 說走出去，巳火說機緣跟著你的行動走——這幾種場合這個月特別有感情能量。</p>
+    <div class="divider"></div>
+
+    <div class="outing-box reveal">
+      <h3>🌅 走出去，好事才來</h3>
+      <div class="outing-list">
+        <div class="outing-item">
+          <span class="oi-icon">🍜</span>
+          <div class="oi-text">
+            <h4>去吃那頓你一直想吃的好料</h4>
+            <p>Kenaz 說真實的火花在輕鬆的場合最容易點燃——而吃一頓好吃的，是讓人最放鬆、最真實的時候。這個月不要再說「下次再去」，就這個月，去預約那間你存了很久的餐廳、去試那個朋友說了好幾次的店。太陽說你出現的地方你就是焦點，讓那份開心大吃的活力成為你這個月最有魅力的樣子。有時候最好的感情開始，就是在一頓飯裡。</p>
+          </div>
+        </div>
+        <div class="outing-item">
+          <span class="oi-icon">🗺️</span>
+          <div class="oi-text">
+            <h4>安排一趟說走就走的短途旅遊</h4>
+            <p>Raidho 是旅程的符文，這個月它的能量特別強——不需要出國，附近的一個你沒去過的地方、一個讓你換個環境的週末短旅，都是 Raidho 說的那種「讓感情在移動中發生」的機會。巳火說機緣跟著行動走，你走出平常的環境，感情的能量就跟著走出它原本的框架。帶著那份對新風景的真實好奇，讓 Kenaz 的火花在路途中自然地燃起。</p>
+          </div>
+        </div>
+        <div class="outing-item">
+          <span class="oi-icon">👥</span>
+          <div class="oi-text">
+            <h4>答應那個你本來想說「算了不去了」的聚會</h4>
+            <p>這個月有一個邀請你本來打算婉拒的——太陽說去，巳火說機緣在那裡。巨蟹座有時候會因為「不想社交」、「不熟悉的人太多」、「懶得出門」而錯過一些原本會讓你很開心的場合。這個月試著答應那個你有點猶豫的邀請——那個讓你覺得「去了感覺也還好」的聚會，很可能就是 Kenaz 說的那個讓火花點燃的地方。</p>
+          </div>
+        </div>
+        <div class="outing-item">
+          <span class="oi-icon">😄</span>
+          <div class="oi-text">
+            <h4>坦率一點，讓真實的你被看見</h4>
+            <p>巨蟹座習慣在不確定的情況下把自己保護起來，用幽默或者沉默來保持一個安全距離。但 Kenaz 說這個月那份坦率——說出你真正的想法、讓那個開心大笑的你出現、直接說出「我想去試那間店」——才是最讓人心動的樣子。太陽說你本來就有光，不需要把自己藏起來，讓它自然地照出來。坦率不是失去神秘感，而是讓對方看見你真正的溫度。</p>
+          </div>
+        </div>
+        <div class="outing-item">
+          <span class="oi-icon">🌸</span>
+          <div class="oi-text">
+            <h4>讓好吃的食物成為你的破冰道具</h4>
+            <p>有沒有注意到，當你在一頓很好吃的飯桌上，你整個人會放鬆下來，說話更自然、笑得更真實、對對方的感受也更敏銳？這就是為什麼這個月「一起去吃美食」是最強的感情催化劑。不管是和暗戀的人、還是和交往中的另一半，這個月用一頓認真選的好飯局來讓感情往前走——Kenaz 說那個輕鬆的火花，就在好吃的食物裡。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HANDSOME BOX -->
+  <section id="handsome">
+    <div class="handsome-box reveal">
+      <span class="hb-icon">😍</span>
+      <h3>這個月遇到的對象——長得很帥很美</h3>
+      <p>太陽星的光芒說的不只是你自己的能量，它同時說的是這個月你吸引到的對象也帶著太陽的光彩——那種走進來就讓你眼睛一亮的人，讓你覺得「哇，這個人長得好好看」的那種。不是普通的長相，而是那種讓你第一眼就注意到、然後越看越好看的那種魅力。巳火說這份相遇的能量是真實的，不是你的幻覺——那個讓你心跳加速的外型，配上他/她讓你感覺舒服的相處方式，就是這個月命盤準備給你的那份驚喜。記住：你要走出去才能遇到他/她，他/她不會自己敲你家門。</p>
+    </div>
+  </section>
+
+  <!-- SITUATIONS -->
+  <section id="situations">
+    <h2 class="section-title">你的10月</h2>
+    <p class="section-sub">找到你的狀態，看看這個月的牌對你說了什麼。</p>
+    <div class="divider"></div>
+
+    <div class="situation-list">
+
+      <div class="situation s1 reveal">
+        <span class="sit-tag">✦ 目前單身</span>
+        <h3>走出去，那個讓你心動的帥哥美女就在外面等你</h3>
+        <p>Raidho 說感情這個月在移動中發生——你不出去，那份緣分就只能在外面等著你。太陽說你這個月的吸引力非常強，你出現的地方自然會成為焦點；巳火說機緣跟著你的行動走，你每一次答應出門，就是讓那份機緣更近一步。這個月那個讓你第一眼就心跳加速的人是真實存在的，不是想像出來的。</p>
+        <div class="coral-tag">「我知道應該多出去，但有時候就是懶，而且也不確定出去了有沒有用——結果就繼續待在家裡等。」</div>
+        <p>Kenaz 說那個火花不會自己跑到你家來——它在某一頓你認真去吃的飯局裡、在某一個你本來不打算去的聚會裡、在某一次說走就走的小旅程裡。太陽說你走出去之後，那份外型讓你眼睛一亮的對象是真的會在這個月出現的，而且他/她對你的感覺同樣是真實的——Kenaz 說那個火花是雙向的。這個月給自己一個規定：至少出門三次，讓緣分有機會找到你。</p>
+      </div>
+
+      <div class="situation s2 reveal">
+        <span class="sit-tag">☀️ 有交往對象</span>
+        <h3>Raidho 說這個月最好的感情催化劑是一起出去</h3>
+        <p>有交往對象的巨蟹座這個月，Raidho 和 Kenaz 一起說的是：帶著對方走出日常。你們的感情是有的，基礎也是真實的，但太陽說這個月感情需要一點新的能量注入——不是改變什麼，而是讓你們在一個不一樣的環境裡，重新看見彼此最有活力的那一面。一頓你們從來沒去過的餐廳、一個說好了一直沒去的地方、一個讓你們都說「啊對，我們終於來了」的旅程。</p>
+        <div class="coral-tag">「我們感情不差，但最近都是固定的模式——固定的餐廳、固定的行程，有點少了一點新鮮感。」</div>
+        <p>Kenaz 說那個讓感情重新有溫度的火花，往往在你們共同體驗了一件新事物之後自然地點燃——一頓讓你們都超滿足的好料、一個讓你們一起說「下次還要來」的地方、或者一個讓你們笑著回憶的意外插曲。巳火說行動力是關鍵，這個月別再說「以後再去」——就現在，就這個月，安排它，讓那份出遊的能量把 Kenaz 的火花燒得更旺。</p>
+      </div>
+
+      <div class="situation s3 reveal">
+        <span class="sit-tag">💛 有結婚對象／已婚</span>
+        <h3>太陽說讓長期感情重新曬到陽光，一起走出日常</h3>
+        <p>在長期關係裡，太陽星這個月說的是讓那份感情「重新被看見」——不是改變什麼，而是讓你們在一個不同的場景裡，重新感受到彼此的存在。Raidho 說移動帶來新的能量，長期關係裡最容易讓感情重新有溫度的事，往往不是一個大計畫，而是一個你們都覺得「對，就是要這樣」的日常出逃。</p>
+        <div class="coral-tag">「我們在一起很久了，有時候我希望我們能多一點在外面的時光——不是在家看電視，而是去一個新的地方，重新感覺我們是在一起『出去玩』的。」</div>
+        <p>巳火說行動力是這個月的關鍵——這個月不要再把那個「等有空再說」的出遊計畫繼續往後推。Kenaz 說在共同的旅程和美食裡，那份讓你們在一起的喜悅會重新流出來。訂一頓讓彼此都期待的晚餐、規劃一個哪怕只有一天的小旅程、去一個你們以前常去但好久沒去的地方——太陽說那份感情的光還在，只是需要你們走出去讓它重新照到。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPATIBILITY -->
+  <section id="compat">
+    <h2 class="section-title">10月巨蟹座感情星座配對</h2>
+    <p class="section-sub">這個月和誰出遊最有感情能量？和誰容易讓計畫泡湯？</p>
+    <div class="divider"></div>
+
+    <div class="compat-section reveal">
+      <div class="compat-title good">✦ 感情能量最合・這個月出遊最有火花</div>
+      <div class="compat-grid">
+        <div class="compat-row">
+          <div class="compat-rank rank-good">1</div>
+          <div class="compat-sign sign-good">♏</div>
+          <div class="compat-info">
+            <h4>天蠍座 ♏・第一名</h4>
+            <p>天蠍這個月的深度和巨蟹的 Kenaz 火花能量完美共鳴——一起出去吃飯、一起去一個新地方，天蠍帶給巨蟹的是那種「我感覺被真正陪著」的踏實感。太陽說巨蟹這個月的光芒在天蠍面前特別有吸引力，天蠍看見了巨蟹在放鬆狀態下最有魅力的那一面。Raidho 說旅程帶來緣分，這個組合這個月在一趟出遊或一頓美食之後，感情能量會有一個讓雙方都感覺「對，就是這樣」的升溫。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-good">2</div>
+          <div class="compat-sign sign-good">♑</div>
+          <div class="compat-info">
+            <h4>摩羯座 ♑・第二名</h4>
+            <p>巳火的行動力配上摩羯的踏實，出遊計畫說到做到——摩羯不會臨時取消、不會給你模糊的答案，讓巨蟹感覺這份計畫是被認真對待的。太陽說你這個月的光芒在摩羯面前有一種被認真欣賞的安全感，摩羯不只是覺得你好看，他/她也看見了你在輕鬆出遊狀態下那份真實的溫暖。Kenaz 說火花在穩定中燃燒，這個組合這個月有一種越出去越想繼續在一起的感覺。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-good">3</div>
+          <div class="compat-sign sign-good">♓</div>
+          <div class="compat-info">
+            <h4>雙魚座 ♓・第三名</h4>
+            <p>Kenaz 的火花在雙魚的感性面前特別有溫度——一頓好吃的飯、一個讓你們都覺得很美的地方，雙魚和巨蟹在一起的那份感情流動是自然而深層的。太陽說巨蟹這個月的光芒很強，雙魚的靈感和感受力讓他/她能感受到巨蟹那份溫暖和真實。Raidho 說旅程帶來緣分，這個組合在出遊的過程中很容易有讓雙方都難忘的美好瞬間。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compat-section reveal">
+      <div class="compat-title warn">⚠️ 這個月容易讓出遊計畫出問題・需要注意</div>
+      <div class="compat-grid">
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">1</div>
+          <div class="compat-sign sign-warn">♎</div>
+          <div class="compat-info">
+            <h4>天秤座 ♎・第一名</h4>
+            <p>Raidho 說行動是關鍵，但天秤這個月的猶豫和選擇困難讓計畫很難確定——「去哪裡吃？」「這個還是那個？」「再想想？」天秤的模糊讓巨蟹這個月想要出去的行動力被一再推遲。巳火說機緣跟著行動走，但在天秤的猶豫面前那個行動根本出不了門。太陽的好能量在天秤的不確定感裡也很難真正落地，讓巨蟹感覺很挫敗。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">2</div>
+          <div class="compat-sign sign-warn">♈</div>
+          <div class="compat-info">
+            <h4>牡羊座 ♈・第二名</h4>
+            <p>巳火遇上牡羊火，兩把火這個月容易在出遊計畫上意見衝突——你想去吃精心選的餐廳，牡羊說隨便找一家就好；你有想去的地方，牡羊已經訂好別的行程了；你想慢慢逛，牡羊已經衝去下一個景點了。兩個人都有行動力但方向不同，Kenaz 說的火花這個月在牡羊面前容易變成摩擦的火星，而不是溫暖的火炬。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">3</div>
+          <div class="compat-sign sign-warn">♐</div>
+          <div class="compat-info">
+            <h4>射手座 ♐・第三名</h4>
+            <p>Raidho 說節奏是關鍵，但射手這個月太隨性讓巨蟹需要的確認感和安排感完全找不到——計畫說好了射手可能臨時說「改一下」；巨蟹想要一個認真安排的美食約會，射手說「隨便啦哪裡都好」。這種隨性讓巨蟹感覺付出的心意沒有被認真對待，太陽的好能量也在這種不確定感裡很難流動起來。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="quote-box reveal">
+      <span class="qm">"</span>
+      <p>巨蟹座，太陽說你的光芒這個月最亮，Raidho 說好事在外面等你，Kenaz 說火花就在那頓飯、那趟旅程裡——這個10月，帶著你最坦率真實的那一面走出去，讓那份暖陽能量帶你遇見讓你心動的人。</p>
+    </div>
+  </section>
+
+  <!-- 199 BLOCK -->
+  <section id="price" style="padding:60px 0 0;position:relative;z-index:1;">
+    <div class="container">
+      <div class="price-block reveal">
+        <div class="price-inner">
+          <div class="price-tag">✦ 第一次體驗限定</div>
+          <div class="price-limit">⚠️ 本月名額有限</div>
+          <h2>麵包學長初次檢測</h2>
+          <div class="price-amount"><span>NT$</span>199</div>
+          <p>想知道那個讓你一眼心動的帥哥美女是不是命盤說的對的人？想確認太陽星說的感情好運怎麼接住？麵包學長初次檢測幫你快速看清楚這個月感情能量的方向，讓好事真正落地。本月名額有限，額滿暫停。</p>
+          <a class="price-cta" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">留言「199」立即報名</a>
+          <div class="price-note">私訊麵包學長 LINE @423hhxdn，留言「199」即可・額滿為止</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-header reveal">
+      <span class="cta-eyebrow">✦ 讓太陽能量真正落地</span>
+      <h2>占卜幫你看清楚這個月感情好運的方向</h2>
+      <p>當你知道 Raidho 說的那個地方在哪裡、Kenaz 的火花從哪個方向來，你才能讓這個月的出遊和美食真正成為你的感情催化劑。</p>
+    </div>
+
+    <div class="cta-grid reveal">
+      <div class="cta-opt">
+        <span class="icon">🔮</span>
+        <h3>盧恩符文占卜</h3>
+        <p>想知道那個讓你心動的對象對你的真實想法？想確認 Kenaz 說的火花是不是雙向的？盧恩幫你看清楚。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">⭐</span>
+        <h3>紫微斗數合盤</h3>
+        <p>想看你和那個讓你一眼心動的人命盤緣分深淺？合盤幫你確認太陽說的這份吸引力，在命盤上有多深。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">💰</span>
+        <h3>金錢靈氣體驗</h3>
+        <p>想讓太陽的光芒能量更穩定、讓出遊的時候整個人狀態更好？金錢靈氣幫你把能量補滿，讓好事更自然地流進來。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">🌀</span>
+        <h3>奇門遁甲・開桃花</h3>
+        <p>想讓 Raidho 說的那趟旅程、那頓飯局在最好的時機發生？奇門遁甲幫你把這個月感情最旺的行動時機算清楚。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+    </div>
+
+    <div class="cta-note reveal">
+      📣 10月集體體驗冥想活動即將登場，特別適合這個月需要讓太陽能量真正落地、讓自己準備好走出去迎接好緣分的巨蟹座，名額有限，歡迎隨時私訊詢問。
+    </div>
+  </div>
+</section>
+
+<footer>
+  ♋ Cancer Love Reading · Rune × ZiWei · October 2026
+</footer>
+
+<script>
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.style.animationPlayState='running';});
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
